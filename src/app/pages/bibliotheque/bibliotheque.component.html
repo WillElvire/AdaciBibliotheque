@@ -1,0 +1,36 @@
+<div class="main">
+  <button tuiButton type="button" class="tui-space_right-3 tui-space_bottom-3" (click)="showAddBookModal()">
+    Ajouter un livre
+  </button>
+
+  <ng-container *ngIf="books.length > 0">
+    <table tuiTable class="table" [columns]="columns">
+      <thead>
+        <tr tuiThGroup>
+          <th tuiTh [resizable]="true">
+            Name
+          </th>
+          <th tuiTh>description</th>
+          <th tuiTh>maisonEdition</th>
+          <th tuiTh>nombreDePage</th>
+          <th tuiTh>titre</th>
+          <th tuiTh>dateDeParution</th>
+          <th tuiTh>name</th>
+          <th tuiTh>isbn</th>
+          <th tuiTh> Action</th>
+        </tr>
+      </thead>
+      <tbody tuiTbody [data]="books">
+        <tr *ngFor="let item of books " tuiTr>
+          <td  tuiTd>
+            {{ item.name }}
+          </td>
+          <td tuiTd>
+            <button tuiButton> modifier</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </ng-container>
+</div>

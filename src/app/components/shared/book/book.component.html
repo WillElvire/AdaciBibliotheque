@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <form [formGroup]="bookForm" (submit)="addNewBook()">
+    <tui-input formControlName="name">
+      Name
+      <input tuiTextfield type="text" />
+    </tui-input>
+    <tui-input formControlName="title">
+      Title
+      <input tuiTextfield type="text" />
+    </tui-input>
+    <tui-input formControlName="description">
+      Description
+      <input tuiTextfield type="text" />
+    </tui-input>
+    <tui-input formControlName="isbn">
+      Numero isbn
+      <input tuiTextfield type="text" />
+    </tui-input>
+    <tui-input formControlName="nombreDePage">
+      Nombre de page
+      <input tuiTextfield type="text" />
+    </tui-input>
+
+    <tui-input formControlName="maisonEdition">
+      Maison d'edition
+      <input tuiTextfield type="text" />
+    </tui-input>
+
+    <tui-input-date tuiUnfinishedValidator="Date de parution" formControlName="dateDeParution">
+      Date de parution
+    </tui-input-date>
+
+
+    <br>
+    <br>
+    <button tuiButton type="submit"> Valider </button>
+  </form>
+
+</div>
